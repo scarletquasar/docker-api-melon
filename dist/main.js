@@ -1,1 +1,0 @@
-(()=>{"use strict";var t=http.app("0.0.0.0","3000",!1);t.get("/",function(){return http.result(200,"Hello")}.toString()),t.run()})();
