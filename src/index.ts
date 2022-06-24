@@ -1,5 +1,11 @@
-const app = http.app("0.0.0.0", "3000", false)
+const app = http.app({
+    name: "test",
+    host: "0.0.0.0",
+    port: "3000"
+})
 
-app.get("/", "() => 'Hello World!'")
+const getRoute = () => http.result(200, "Hello")
+
+app.get("/", getRoute)
 
 app.run()
