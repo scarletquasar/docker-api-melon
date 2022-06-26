@@ -1,6 +1,7 @@
 {
   "scripts": {
     "go-docker": "npx melon load ./",
+    "go": "babel --extensions .ts ./src/ --out-dir ./babel && webpack ./babel/index.js && melon load ./",
     "docker": "docker build -t melon-sample . && docker run -dp 3000:3000 melon-sample"
   },
   "devDependencies": {
